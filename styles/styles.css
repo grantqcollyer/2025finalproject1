@@ -1,0 +1,120 @@
+{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e6e6e6;
+    background-color: #242424; /* deep charcoal */
+
+    padding: 56px;
+    margin: 0;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+p {
+    max-width: 70ch;
+}
+
+/* ===== Lists ===== */
+li {
+    font-size: 15px;
+    font-style: italic;
+    color: #cfcfcf;
+    margin-bottom: 8px;
+}
+
+/* ===== Links ===== */
+a {
+    color: #a89bff; /* subtle luxury violet */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+    color: #c6bdff;
+    border-bottom: 1px solid rgba(198, 189, 255, 0.6);
+}
+
+a:visited {
+    color: #8f85e6;
+}
+
+/* ===== Utility Classes ===== */
+.resumelistheading {
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/* ===== Background Image Section ===== */
+.homebg {
+    background-image: url(../metro_city.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* ===== Content Containers (Cards) ===== */
+.box1 {
+    background: linear-gradient(
+        180deg,
+        rgba(32, 32, 32, 0.95),
+        rgba(26, 26, 26, 0.95)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.box2 {
+    padding: 24px;
+}
+
+.box3 {
+    margin: 48px auto;
+    max-width: 960px;
+}
+
+/* ===== Subtle Separation ===== */
+.box1 + .box1 {
+    margin-top: 32px;
+}
+
+/* ===== Optional Polished Touch ===== */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    margin: 48px 0;
+}

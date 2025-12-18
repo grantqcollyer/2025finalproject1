@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rap Name Generator</title>
+  <style>
+    body {
+      font-family: 'Arial Black', Arial, sans-serif;
+      background: linear-gradient(135deg, #111, #333);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem 3rem;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    #rapName {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+      color: #f5c542;
+      min-height: 4rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      background: #f5c542;
+      color: #111;
+      font-weight: bold;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245, 197, 66, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Rap Name</h1>
+    <div id="rapName">---</div>
+    <button onclick="generateRapName()">Generate Rap Name</button>
+  </div>
+
+  <script>
+    const prefixes = [
+      "Lil", "Big", "Young", "DJ", "MC", "Saint", "Don", "Sir", "King", "Queen",
+      "Trap", "Ice", "Yung", "OG", "Dr", "Professor", "Captain", "General", "Lord", "Baby",
+      "Metro", "Savage", "Silent", "Dark", "Golden", "Neon", "Midnight", "Ultra", "Supreme", "Prime"
+    ];
+
+    const suffixes = [
+      "Flow", "Drip", "Bars", "808", "Vibes", "Storm", "Blaze", "Venom", "Shadow", "Phantom",
+      "Legend", "Riot", "Cipher", "Tempo", "Echo", "Chaos", "Empire", "Dynasty", "Rebel", "Wolf",
+      "Tiger", "Ghost", "Nova", "Galaxy", "Inferno", "Frost", "Blade", "Pulse", "Hustle", "Crown"
+    ];
+
+    function getRandomItem(list) {
+      return list[Math.floor(Math.random() * list.length)];
+    }
+
+    function generateRapName() {
+      const first = getRandomItem(prefixes);
+      const second = getRandomItem(suffixes);
+
+      document.getElementById("rapName").textContent = `${first} ${second}`;
+    }
+
+      document.getElementById("rapName").textContent = `${first} ${second}`;
+  </script>
+</body>
+</html>
